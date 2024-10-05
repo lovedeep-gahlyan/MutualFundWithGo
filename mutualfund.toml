@@ -1,0 +1,23 @@
+###############################################################################
+# Database configuration
+
+# Connection string is in Go mysql driver format:
+# databaseUser:databaseUserPassword@tcp(host:port)/databaseName
+#connection_string = "root:root123@tcp(localhost:3306)/runners_db"
+
+[database]
+
+connection_string = "experiment:experiment@tcp(localhost:3306)/mutualfund"
+max_idle_connections = 5
+max_open_connections = 20
+connection_max_lifetime = "60s"
+driver_name = "mysql"
+# script_path = "dbscripts/public_schema.sql"
+
+###############################################################################
+# HTTP server configuration
+
+[http]
+
+server_address = ":8080"
+###############################################################################
